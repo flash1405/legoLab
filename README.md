@@ -6,3 +6,5 @@
 
 ## Conceptual and Logical Database Design - [Stage.2 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.2)
 
+## Database Design - [Stage.2 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.3)
+
