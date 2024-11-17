@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Lab - Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <nav>
+            <span class = "title">
+                <img src="./images/lego-lab-logo.png" alt="LEGO Lab Logo" class="logo">
+                <h1>LEGO LAB</h1>
+            </span>
+
+            <ul>
+                <li><a href="./signUp.html">Sign Out</a></li>
+                <li><a href="./allParts.html">All Parts</a></li>
+                <li><a href="./allBuilds.html">All Builds</a></li>
+                <li><a href="./inventory.html">My Inventory</a></li>
+                <li><a href="./builder.html">Builder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main -->
+    <main class="builder-page">
+        <!-- Suggested Builds Sidebar -->
+        <aside class="suggested-builds">
+            <h3>Suggested Builds for Inventory 1</h3>
+            <!--  Build Item -->
+            <div class="build-item">
+                <img src="./images/build1.png" alt="Build Image" class="build-thumbnail">
+                <p>Build Name</p>
+            </div>
+
+            <!-- More builds -->
+            <div class="build-item">
+                <img src="./images/build2.png" alt="Build Image" class="build-thumbnail">
+                <p>Build Name</p>
+            </div>
+
+        </aside>
+
+        <!-- Section -->
+        <section class="build-visualization-section">
+            <!-- Build Visualization -->
+            <div class="build-visualization">
+                <img src="./images/build1.png" alt="LEGO Build Visualization" class="visualization-image">
+            </div>
+
+            <!-- Parts List with Status -->
+            <div class="parts-list">
+                <h3>Parts Needed</h3>
+                <!--  Part Item -->
+                <div class="part-item in-inventory">
+                    Part 1 - In Inventory
+                    <span class="status-icon">✔️</span>
+                </div>
+
+                <!-- Part Item -->
+                <div class="part-item not-in-inventory">
+                    Part 2 - Not in Inventory
+                    <span class="status-icon">❌</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

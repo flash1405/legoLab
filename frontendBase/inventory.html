@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO Lab - My Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <nav>
+            <span class = "title">
+                <img src="./images/lego-lab-logo.png" alt="LEGO Lab Logo" class="logo">
+                <h1>LEGO LAB</h1>
+            </span>
+
+            <ul>
+                <li><a href="./signUp.html">Sign Out</a></li>
+                <li><a href="./allParts.html">All Parts</a></li>
+                <li><a href="./allBuilds.html">All Builds</a></li>
+                <li><a href="./inventory.html">My Inventory</a></li>
+                <li><a href="./builder.html">Builder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="inventory-page">
+        <!-- Sidebar  -->
+        <aside class="sidebar">
+            <!-- Filter Buttons -->
+            <div class="filter-section">
+                <h3>LEGO Parts</h3>
+                <button class="filter-btn">All</button>
+                <button class="filter-btn">Favorites</button>
+                <button class="filter-btn">Build Pieces</button>
+            </div>
+
+            <!-- Search  -->
+            <div class="search-section">
+                <h3>Search Parts</h3>
+                <input type="text" placeholder="Search" class="search-input">
+                <!-- Filter Inputs -->
+                <div class="search-filters">
+                    <input type="text" placeholder="Color" class="filter-input">
+                    <input type="text" placeholder="Width" class="filter-input">
+                    <input type="text" placeholder="Length" class="filter-input">
+                    <input type="text" placeholder="Height" class="filter-input">
+                </div>
+
+                <!-- Upload Image -->
+                <div class="upload-section">
+                    <h3>Upload Image</h3>
+                    <input type="file" accept="image/*" class="upload-input">
+                    <button class="upload-btn">Upload Part Image</button>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Inventory List -->
+        <section class="inventory-list-section">
+            <!--  Part Item -->
+            <div class="inventory-item">
+                <img src="./images/part1.png" alt="LEGO Part Image" class="part-image">
+                <div class="part-details">
+                    <p>Piece Name</p>
+                    <p>Quantity: 25</p>
+                </div>
+                <div class="favorite-section">
+                    Favorite
+                    <span class="favorite-icon">★</span> 
+                </div>
+            </div>
+
+            
+            <!-- Part Item -->
+            <div class="inventory-item">
+                <img src="./images/part2.png" alt="LEGO Part Image" class="part-image">
+                <div class="part-details">
+                    <p>Piece Name</p>
+                    <p>Quantity: 10</p>
+                </div>
+                <div class="favorite-section">
+                    Favorite
+                    <span class="favorite-icon">★</span> 
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
