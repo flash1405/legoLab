@@ -1,8 +1,7 @@
 const express = require("express");
 const cors = require("cors");
-const legoRoutes = require("./routes");
 const path = require("path");
-const pool = require("../config/db");
+const pool = require("./config/db");
 
 const app = express();
 
@@ -15,10 +14,6 @@ app.get("/", (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, "../frontend")));
-
-app.get("/add-part", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
 
 app.post("/add-part", async (req, res) => {
   const { user_id, part_id, part_color, part_quantity } = req.body;

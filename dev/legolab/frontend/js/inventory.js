@@ -2,16 +2,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const userId = sessionStorage.getItem("user_id");
   const inventoryContainer = document.getElementById("inventory-container");
 
-  // Fetch inventory data from the backend
   try {
     const response = await fetch(`/inventory?user_id=${userId}`);
     const inventory = await response.json();
 
     if (response.ok) {
-      // Clear any existing content
       inventoryContainer.innerHTML = "";
-
-      // Populate inventory
       inventory.forEach((item) => {
         const inventoryItem = document.createElement("div");
         inventoryItem.classList.add("inventory-item");
