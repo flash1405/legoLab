@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO Lab - My Inventory</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav>
+        <span class="title">
+          <img
+            src="./images/lego-lab-logo.png"
+            alt="LEGO Lab Logo"
+            class="logo"
+          />
+          <h1>LEGO LAB</h1>
+        </span>
+
+        <ul>
+          <li><a href="./signUp.html">Sign Out</a></li>
+          <li><a href="./allParts.html">All Parts</a></li>
+          <li><a href="./allBuilds.html">All Builds</a></li>
+          <li><a href="./inventory.html">My Inventory</a></li>
+          <li><a href="./builder.html">Builder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="inventory-page">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="filter-section">
+          <h3>LEGO Parts</h3>
+          <button class="filter-btn">All</button>
+          <button class="filter-btn">Favorites</button>
+          <button class="filter-btn">Build Pieces</button>
+        </div>
+      </aside>
+
+      <!-- Inventory List -->
+      <section class="inventory-list-section">
+        <h2>My Inventory</h2>
+        <div id="inventory-container">
+          <!-- Inventory items will be dynamically loaded here -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/inventory.js"></script>
+  </body>
+</html>
