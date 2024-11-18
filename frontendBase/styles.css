@@ -1,0 +1,243 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* nav */
+header {
+    background-color: #e60000;
+}
+h1 {
+    font-size: 50px;
+}
+.signuptitle {
+    font-size: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo {
+    max-width: 50px;
+} 
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* end nav */
+main.sign-up-page {
+
+
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    height: 100vh; 
+}
+.login-container {
+
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+.logo {
+    width: 200px; 
+}
+
+
+.login-form {
+    margin-top: 20px;
+}
+
+.login-form input {
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.form-buttons button {
+    background-color: #ffcc00; /* LEGO yellow */
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.form-buttons button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+}
+
+.lego-build-image img {
+    width: 300px;
+}
+
+/* Main Layout */
+main.all-builds-page, 
+main.inventory-page, 
+main.all-parts-page, 
+main.builder-page {
+    display: flex;
+}
+.suggested-builds {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.suggested-builds h3 {
+    margin-bottom: 15px;
+}
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.filter-section h3,
+.search-section h3,.upload-section h3 {
+    margin-bottom: 10px;
+}
+
+.filter-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e60000;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-input,
+.filter-input, 
+.upload-input {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.upload-btn {
+    background-color:#e60000; 
+    color:white; 
+    padding :10px; 
+    border:none; 
+    border-radius :5px; 
+    cursor:pointer; 
+ }
+ .upload-btn:hover{
+    background-color:#cc0000;
+ }
+
+/* List */
+.builds-list-section, 
+.inventory-list-section, 
+.parts-list-section {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.build-item, 
+.inventory-item,
+.part-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px; 
+}
+.build-thumbnail {
+    width: 50px; 
+    margin-right: 10px;
+}
+.build-visualization-section {
+    flex-grow: 1;
+    padding: 20px;
+}
+.build-visualization {
+    margin-bottom: 20px;
+}
+.visualization-image {
+    width: 30%; 
+}
+.parts-list h3 {
+    margin-bottom :10px; 
+ }
+.in-inventory{
+    background-color:#d4edda; /* Light green for in inventory */
+}
+.not-in-inventory{
+   background-color:#f8d7da; /* Light red for not in inventory */
+}
+.status-icon{
+   font-size :20px; 
+}
+.part-image, 
+.build-image {
+   width :50px; 
+}
+
+.part-details p, 
+.build-details p{
+   margin-bottom :5px; 
+}
+
+.favorite-section {
+   display:flex; 
+   align-items:center; 
+}
+
+.favorite-icon {
+   font-size :20px; 
+   color:#ccc; 
+}
+.favorite-icon:hover{
+   color:#ffcc00; 
+   cursor: pointer;
+}
