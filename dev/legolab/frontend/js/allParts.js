@@ -3,7 +3,10 @@ const userId = "1";
 
 // Fetch all parts from the backend and render them
 async function fetchAndRenderParts() {
-  const response = await fetch("/parts");
+  console.log("here");
+  const response = await fetch(
+    `/parts/?name=${document.getElementById("search-input").textContent}`
+  );
   const parts = await response.json();
 
   const partsList = document.getElementById("parts-list");

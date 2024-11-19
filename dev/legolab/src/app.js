@@ -1,16 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const pool = require("./config/db");
+const db = require("./db");
 
 const app = express();
 
 app.use(cors());
-app.use(express.json()); // Parse JSON requests
-// app.use("/api/lego", legoRoutes);
+app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the LEGO Builder API!");
+  res.sendFile(path.join(__dirname, "../frontend/signUp.html"));
 });
 
 app.use(express.static(path.join(__dirname, "../frontend")));
@@ -25,7 +24,7 @@ app.post("/add-part", async (req, res) => {
     `;
 
   try {
-    await pool.query(query, [user_id, part_id, part_color, part_quantity]);
+    await db.query(query, [user_id, part_id, part_color, part_quantity]);
     res.status(200).json({ message: "Part added to inventory successfully!" });
   } catch (err) {
     console.error(err);
@@ -49,7 +48,7 @@ app.get("/inventory", async (req, res) => {
   `;
 
   try {
-    const [rows] = await pool.query(query, [user_id]);
+    const [rows] = await db.query(query, [user_id]);
     res.status(200).json(rows);
   } catch (err) {
     console.error(err);
@@ -60,10 +59,10 @@ app.get("/inventory", async (req, res) => {
 app.get("/parts", async (req, res) => {
   const query = `
       SELECT part_id, part_color, part_name, part_png, part_dimensions 
-      FROM PARTS LIMIT 100;
+      FROM PARTS WHERE part_name LIKE "%?%" LIMIT 1000;
   `;
   try {
-    const [rows] = await pool.query(query);
+    const [rows] = await db.query(query, req.query.name || "a");
     res.status(200).json(rows);
   } catch (err) {
     console.error(err);
@@ -79,7 +78,7 @@ app.post("/inventory", async (req, res) => {
       ON DUPLICATE KEY UPDATE part_quantity = part_quantity + ?;
   `;
   try {
-    await pool.query(query, [
+    await db.query(query, [
       user_id,
       part_id,
       part_color,
