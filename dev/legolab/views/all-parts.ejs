@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO Lab - All Parts</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav>
+        <span class="title">
+          <img
+            src="/images/lego-lab-logo.png"
+            alt="LEGO Lab Logo"
+            class="logo"
+          />
+          <h1>LEGO LAB</h1>
+        </span>
+        <ul>
+          <li><a href="/logout">Sign Out</a></li>
+          <li><a href="/dashboard">My Inventory</a></li>
+          <li><a href="/all-builds">All Builds</a></li>
+          <li><a href="/all-parts">All Parts</a></li>
+          <li><a href="/builder">Builder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="all-parts-page">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="filter-section">
+          <h3>Search Parts</h3>
+          <input
+            type="text"
+            class="search-input"
+            id="part-name"
+            placeholder="Search by name"
+          />
+          <input
+            type="text"
+            class="search-input"
+            id="part-color"
+            placeholder="Search by color"
+          />
+          <button id="search-btn" class="filter-btn">Search</button>
+        </div>
+        <div id="upload-pane" class="upload-pane">
+          <h3>Upload a Part Image</h3>
+          <input type="file" id="image-input" accept="image/*" />
+          <img
+            src="/images/part1.png"
+            alt="Part Image"
+            id="upload-part-image"
+            class="upload-part-image"
+          />
+          <input
+            type="number"
+            id="quantity-input"
+            class="quantity-input"
+            placeholder="Quantity"
+            min="1"
+          />
+          <select id="color-select" class="color-select">
+            <option value="" disabled selected>Select a color</option>
+            <!-- Options will be dynamically populated -->
+          </select>
+          <button id="submit-upload-btn" class="filter-btn">Add Part</button>
+        </div>
+      </aside>
+
+      <!-- Parts List -->
+      <section class="parts-list-section">
+        <h2>All Parts</h2>
+        <div id="parts-container">
+          <!-- Parts will be dynamically loaded here -->
+        </div>
+        <div class="pagination" id="pagination-controls">
+          <button id="prev-page" disabled>Previous</button>
+          <span id="page-info"></span>
+          <button id="next-page">Next</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/all-parts.js"></script>
+  </body>
+</html>

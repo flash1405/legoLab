@@ -44,7 +44,7 @@ app.get("/inventory", async (req, res) => {
       p.part_png
     FROM INVENTORY i
     INNER JOIN PARTS p ON i.part_id = p.part_id AND i.part_color = p.part_color
-    WHERE i.user_id = 1;
+    WHERE i.user_id = "a828e397-b53e-11ef-92bc-a05950561075";
   `;
 
   try {

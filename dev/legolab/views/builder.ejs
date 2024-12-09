@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO Lab - My Inventory</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav>
+        <span class="title">
+          <img
+            src="/images/lego-lab-logo.png"
+            alt="LEGO Lab Logo"
+            class="logo"
+          />
+          <h1>LEGO LAB</h1>
+        </span>
+        <ul>
+          <li><a href="/logout">Sign Out</a></li>
+          <li><a href="/dashboard">My Inventory</a></li>
+          <li><a href="/all-builds">All Builds</a></li>
+          <li><a href="/all-parts">All Parts</a></li>
+          <li><a href="/builder">Builder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="builder-page">
+      <div class="container">
+        <!-- Left Pane: Active Build Details -->
+        <aside class="sidebar">
+          <h2>Current Build</h2>
+          <div id="active-build" class="active-build-details">
+            <!-- Active build details will be populated here -->
+            <img src="build-image.jpg" alt="Build Image" class="build-image" />
+            <h3 id="build-name">Build Name</h3>
+            <p><strong>Rating:</strong> <span id="build-rating">4.5</span></p>
+            <p>
+              <strong>Release Year:</strong> <span id="build-year">2023</span>
+            </p>
+            <p>
+              <strong>Total Parts:</strong>
+              <span id="build-part-count">120</span>
+            </p>
+          </div>
+        </aside>
+
+        <!-- Middle Pane: Parts User Has -->
+        <section class="parts-section">
+          <h3>Parts You Have</h3>
+          <div class="parts-list-container">
+            <div class="part-container">
+              <ul id="user-parts-list" class="parts-list">
+                <!-- Each part is now in its own container -->
+                <li class="part-item">
+                  <img
+                    src="part-image.jpg"
+                    alt="Part Image"
+                    class="part-image"
+                  />
+                  <div class="part-info">
+                    <p><strong>Name:</strong> Part Name</p>
+                    <p><strong>Color:</strong> Part Color</p>
+                    <p><strong>Dimensions:</strong> Part Dimensions</p>
+                    <p><strong>Quantity:</strong> 5</p>
+                  </div>
+                </li>
+                <!-- More part items will be listed here -->
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Pane: Parts User Needs -->
+        <section class="parts-section">
+          <h3>Parts You Need</h3>
+          <div class="parts-list-container">
+            <div class="part-container">
+              <ul id="missing-parts-list" class="parts-list">
+                <!-- Each missing part is also in its own container -->
+                <li class="part-item">
+                  <img
+                    src="part-image.jpg"
+                    alt="Part Image"
+                    class="part-image"
+                  />
+                  <div class="part-info">
+                    <p><strong>Name:</strong> Part Name</p>
+                    <p><strong>Color:</strong> Part Color</p>
+                    <p><strong>Dimensions:</strong> Part Dimensions</p>
+                    <p><strong>Quantity:</strong> 3</p>
+                    <p><strong>Price:</strong> $5.00</p>
+                  </div>
+                </li>
+                <!-- More missing part items will be listed here -->
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="/js/builder.js"></script>
+  </body>
+</html>
