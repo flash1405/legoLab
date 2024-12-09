@@ -110,23 +110,23 @@ Create Table BUILD_HAS_THEME (
 
 select * from parts WHERE (part_dimensions LIKE "(%") ;
 
-describe build_has_theme;
+-- describe build_has_theme;
 
 select * from themes;
 
 INSERT INTO build_has_theme VALUES("756", "001-1");
 
-SET FOREIGN_KEY_CHECKS = 1; 
+-- SET FOREIGN_KEY_CHECKS = 1; 
 
 TRUNCATE TABLE parts;
 
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/build_has_theme.csv' IGNORE 
-INTO TABLE build_has_theme
-FIELDS TERMINATED BY ',' 
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES;
+-- LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/build_has_theme.csv' IGNORE 
+-- INTO TABLE build_has_theme
+-- FIELDS TERMINATED BY ',' 
+-- LINES TERMINATED BY '\n'
+-- IGNORE 1 LINES;
 
-SHOW VARIABLES LIKE "secure_file_priv";
+-- SHOW VARIABLES LIKE "secure_file_priv";
 
 
 

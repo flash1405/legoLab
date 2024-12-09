@@ -1,0 +1,109 @@
+/* Main Builder Page Layout */
+.builder-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  min-height: calc(100vh - 80px);
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Left Pane: Current Build Details */
+.sidebar {
+  flex: 0 0 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #2e3a59;
+}
+
+.active-build-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.build-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+#build-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#build-rating,
+#build-year,
+#build-part-count {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Parts Section */
+.parts-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.parts-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2e3a59;
+}
+
+.parts-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.parts-list {
+  list-style: none;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.part-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.part-image {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.part-info {
+  flex: 1;
+}
+
+.part-info p {
+  margin: 5px 0;
+}
+
+.total-cost {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 15px;
+  text-align: right;
+}

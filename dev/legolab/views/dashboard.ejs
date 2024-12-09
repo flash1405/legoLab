@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEGO Lab - My Inventory</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header>
+      <nav>
+        <span class="title">
+          <img
+            src="/images/lego-lab-logo.png"
+            alt="LEGO Lab Logo"
+            class="logo"
+          />
+          <h1>LEGO LAB</h1>
+        </span>
+        <ul>
+          <li><a href="/logout">Sign Out</a></li>
+          <li><a href="/dashboard">My Inventory</a></li>
+          <li><a href="/all-builds">All Builds</a></li>
+          <li><a href="/all-parts">All Parts</a></li>
+          <li><a href="/builder">Builder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="inventory-page">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="filter-section">
+          <h3>LEGO Parts</h3>
+        </div>
+      </aside>
+
+      <!-- Inventory List -->
+      <section class="inventory-list-section">
+        <h2>My Inventory</h2>
+        <div id="inventory-container">
+          <% if (inventory.length > 0) { %> <% inventory.forEach(item => { %>
+          <div class="inventory-item" id="inventory-item-<%= item.part_id%>">
+            <div class="inventory-item-2">
+              <img
+                src="<%= item.part_png || 'images/part1.png' %>"
+                alt="<%= item.part_name %>"
+                class="part-image"
+              />
+              <div class="part-details">
+                <p><strong>Part Name:</strong> <%= item.part_name %></p>
+                <p><strong>Color:</strong> <%= item.part_color %></p>
+                <p><strong>Quantity:</strong> <%= item.part_quantity %></p>
+              </div>
+            </div>
+            <div class="inventory-actions">
+              <button
+                class="favorite-btn <%= item.is_favorite ? 'favorite' : '' %>"
+                onclick="toggleFavorite('<%= item.part_id %>', '<%= item.part_color %>')"
+                data-favorite="<%= item.is_favorite %>"
+              >
+                <span class="favorite-icon">&#9733;</span>
+                <span class="favorite-text"
+                  ><%= item.is_favorite ? 'Unfavorite' : 'Favorite' %></span
+                >
+              </button>
+              <button
+                class="delete-btn"
+                onclick="deleteInventoryItem('<%= item.part_id %>', '<%= item.part_color %>')"
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+          <% }) %> <% } else { %>
+          <p>No inventory available.</p>
+          <% } %>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="/js/inventory.js"></script>
+</html>
