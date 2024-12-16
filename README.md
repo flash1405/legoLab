@@ -4,7 +4,7 @@ Our web application is designed to assist users in discovering creative ways to 
 
 ## Demo
 
-https://github.com/flash1405/legoLab/tree/main/legoLab Demo.mp4
+https://github.com/user-attachments/assets/479c3eb6-03cb-4110-a0e9-aa324e6048fe
 
 ## Setup Instructions
 
