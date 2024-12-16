@@ -1,12 +1,37 @@
-# fa24-cs411-team103-Reece
+# LEGO Lab
 
-## Team Formation - [Stage.0 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.0)
+Our web application is designed to assist users in discovering creative ways to use their leftover Lego bricks. By helping users find new purposes for bricks that may not be part of any specific model, the app encourages creativity and exploration. Whether users have a few leftover bricks or an entire collection, the app aims to inspire builders to create models from what they thought was junk. We want to inspire resourcefulness and promote ideation in users to find originality within the universe predefined Lego Designs.
 
-## Detailed Project Description - [Stage.1 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.1)
+## Demo
 
-## Conceptual and Logical Database Design - [Stage.2 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.2)
+https://github.com/flash1405/legoLab/tree/main/legoLab Demo.mp4
 
-## Database Design - [Stage.3 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.3)
+## Setup Instructions
 
-## Final Project - [Stage.4 released](https://github.com/cs411-alawini/fa24-cs411-team103-Reece/releases/tag/stage.4)
+1. Install MySQL 8.0
+2. Install Node.js
+3. Open in VSCode
+4. Clone the repository
+5. Open [data/](https://github.com/flash1405/legoLab/tree/main/data) and use the database dump to load up your My SQL Install
+7. Open [dev/legolab/](https://github.com/flash1405/legoLab/tree/main/dev/legolab)
+8. Create .env file with and define the following variables as per the given example and your local My SQL Instance
+   ```
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=password
+   DB_NAME=legolab
+   PORT=3000
+   JWT_SECRET=BANANAS
+   ```
+10. Run ```npm install``` 
+11. Run ```npm start```
 
+
+### Database UML Diagram
+![alt text](https://github.com/flash1405/legoLab/blob/main/doc/stage2_UML.png)
+
+Source - [Rebrickable Datasets](https://rebrickable.com/downloads/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
